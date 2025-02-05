@@ -26,6 +26,14 @@
             document.getElementById('btnNo').style.left = x;
             document.getElementById('btnNo').style.top = y;
         }
+
+        window.addEventListener('load', function() {
+    let audio = document.getElementById("miAudio");
+    audio.play().catch(error => {
+        console.log("Autoplay bloqueado, se necesita interacción del usuario.");
+    });
+});
+
     </script>
 </head>
 
