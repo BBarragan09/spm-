@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Aceptaste! ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mensaje"></h1>
+    
+    <img src="feliz.gif" alt="GIF feliz">
+
+    <script>
+        // Obtener el mensaje de la URL
+        let params = new URLSearchParams(window.location.search);
+        let mensaje = params.get("mensaje");
+
+        // Mostrar el mensaje en la página
+        if (mensaje) {
+            document.getElementById("mensaje").innerText = mensaje;
+        } else {
+            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí! ❤️";
+        }
+    </script>
+
+</body>
+</html>
 
