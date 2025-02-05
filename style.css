@@ -32,7 +32,12 @@ body h1{
     font-size: 3rem;
     padding: 0px;
 }
-
+body {
+    background-image: url('corazon.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 .gif {
     width: 300px; /* Ajusta el ancho */
     height: auto; /* Mantiene la proporción */
