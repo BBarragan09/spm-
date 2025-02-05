@@ -39,6 +39,6 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 .gif {
-    width: 300px; /* Ajusta el ancho */
+    width: 500px; /* Ajusta el ancho */
     height: auto; /* Mantiene la proporción */
 }
