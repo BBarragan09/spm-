@@ -17,8 +17,8 @@
         .collage {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 600px;
+            gap: 15px; /* Espaciado entre imágenes */
+            max-width: 800px; /* Aumenta el tamaño total */
             margin: 20px auto;
         }
         .collage img {
@@ -26,13 +26,24 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            animation: zoomEffect 3s infinite alternate ease-in-out;
+        }
+
+        /* Animación de zoom */
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1); /* Tamaño normal */
+            }
+            100% {
+                transform: scale(1.1); /* Aumenta un 10% */
+            }
         }
     </style>
 </head>
 <body>
 
     <h1>¡Sabía que dirías que sí! ❤️</h1>
-    
+
     <!-- Collage de fotos -->
     <div class="collage">
         <img src="foto1.jpeg" alt="Foto 1">
@@ -62,7 +73,6 @@
             }
         }, { once: true }); // Se ejecuta solo una vez
     </script>
-    <h1>¡Te amo mucho mi vida,me importas muchisimo!❤️</h1>
-    <h1>❤️Todo es mejor cuando estoy contigo❤️</h1>
+
 </body>
 </html>
