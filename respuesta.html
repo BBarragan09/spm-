@@ -14,17 +14,13 @@
         h1 {
             color: #d63384;
         }
-
-        /* Contenedor del collage */
         .collage {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             max-width: 600px;
             margin: 20px auto;
         }
-
-        /* Estilos de las imágenes */
         .collage img {
             width: 100%;
             height: auto;
@@ -46,6 +42,26 @@
         <img src="foto5.jpeg" alt="Foto 5">
         <img src="foto6.jpeg" alt="Foto 6">
     </div>
+
+    <!-- Audio -->
+    <audio id="miAudio" loop>
+        <source src="jauja.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener("click", function() {
+            let audio = document.getElementById("miAudio");
+            let playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("Audio reproduciéndose automáticamente.");
+                }).catch(error => {
+                    console.log("Autoplay bloqueado, esperando interacción del usuario.");
+                });
+            }
+        }, { once: true }); // Se ejecuta solo una vez
+    </script>
 
 </body>
 </html>
