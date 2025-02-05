@@ -27,21 +27,27 @@
             document.getElementById('btnNo').style.top = y;
         }
 
-        window.addEventListener('load', function() {
-    let audio = document.getElementById("miAudio");
-    audio.play().catch(error => {
-        console.log("Autoplay bloqueado, se necesita interacción del usuario.");
-    });
-});
-
     </script>
 </head>
 
 <body>
 
-  <audio id="miAudio" autoplay loop>
+<audio id="miAudio" loop>
     <source src="jauja.mp3" type="audio/mpeg">
 </audio>
+<script>
+    window.addEventListener('load', function() {
+        let audio = document.getElementById("miAudio");
+        let playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Autoplay bloqueado, esperando interacción del usuario.");
+            });
+        }
+    });
+</script>
+
     <div><img src="gato.gif?random=12345" class="gif"> </div>
     
     <div>
