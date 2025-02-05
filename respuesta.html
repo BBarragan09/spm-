@@ -14,32 +14,38 @@
         h1 {
             color: #d63384;
         }
-        img {
-            width: 300px;
+
+        /* Contenedor del collage */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            gap: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Estilos de las imágenes */
+        .collage img {
+            width: 100%;
             height: auto;
-            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
 
-    <h1 id="mensaje"></h1>
-    
-    <img src="feliz.gif" alt="GIF feliz">
+    <h1>¡Sabía que dirías que sí! ❤️</h1>
 
-    <script>
-        // Obtener el mensaje de la URL
-        let params = new URLSearchParams(window.location.search);
-        let mensaje = params.get("mensaje");
-
-        // Mostrar el mensaje en la página
-        if (mensaje) {
-            document.getElementById("mensaje").innerText = mensaje;
-        } else {
-            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí! ❤️";
-        }
-    </script>
+    <!-- Collage de fotos -->
+    <div class="collage">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpg" alt="Foto 4">
+        <img src="foto5.jpg" alt="Foto 5">
+        <img src="foto6.jpg" alt="Foto 6">
+    </div>
 
 </body>
 </html>
-
